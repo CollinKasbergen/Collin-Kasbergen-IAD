@@ -1,0 +1,28 @@
+#ifndef _BALL
+#define _BALL
+
+#include "ofMain.h"
+
+
+class Ball {
+
+public:
+
+    Ball();
+
+    void setup(int,int);
+    void update();
+    void draw();
+
+    // variables
+    float x;
+    float y;
+    float speedY;
+    float speedX;
+    int radius;
+    ofColor color;
+
+private:
+
+};
+#endif
