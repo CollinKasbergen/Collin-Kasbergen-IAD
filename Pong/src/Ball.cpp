@@ -6,8 +6,8 @@ void Ball::setup(){
     x = 800;      // give some random positioning
     y = ofRandom(0, ofGetHeight());
 
-    speedX = ofRandom(-10, 10);           // and random speed and direction
-    speedY = ofRandom(-10, 10);
+    speedX = ofRandom(-5, 5);           // and random speed and direction
+    speedY = ofRandom(-5, 5);
 
     radius = 20;
 
@@ -33,6 +33,11 @@ void Ball::update(int padleftx,int padlefty,int padrightx, int padrighty){
     if((x-180) <= 1 && (y-padlefty-300) <= 1){
         speedX *= -1;
         speedY *= -1;
+    }
+
+    if(x<10){
+        x = 200;
+        y = 200/2;
     }
 }
 
